@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: aliceblue;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: beige;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #e4d9d9;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: auto;
+}
+
+#middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    margin-top: 1em;
+}
+
+#outter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#leftside {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    width: 20%;
+}
+
+#rightside {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: center;
+    width: 20%;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40px;
+    height: 40px;
+    font-size: 0.75em; /* Adjusted font size */
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+    text-align: center; /* Center text horizontally */
+    line-height: 25px; /* Center text vertically */
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+    color:#000;
+    transition: 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    opacity: 0.8;
+}
+
+.blank {
+    background-color: white;
+}
+
+.triple-letter {
+    background-color: #ffcc00;
+}
+
+.double-letter {
+    background-color: #ff9900;
+}
+
+.triple-word {
+    background-color: #ff6666;
+}
+
+.double-word {
+    background-color: #ff3333;
+}
+
+.star {
+    background-color: #000;
+    color: #fff;
+    font-size: 24pt;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    width: 100%;
+    height: 100%;
+    gap: 1px;
+    margin: 0 auto;
+    border-radius: 0.5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #ddabab;
+    padding: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);*/
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+button {
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.5em;
+    background-color: #be9494;
+    color: #382f2f;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #382f2f;
+    color: #be9494;
+    transition: 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);}
+
+table {
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 80%;
+    /*border-radius: 0.5em;*/
+}
+
+tr:nth-child(even) {
+    background-color: #e4b4b4;
+}
+
+tr:nth-child(odd) {
+    background-color: #ddabab;
+}
+
+th {
+    background-color: #be9494;
+    color: #382f2f;
+    padding: 0.5em;
+}
+
+tr {
+    background-color: #ddabab;
+}
+
+td {
+    padding: 0.5em;
+    text-align: center;
+}
+
+#left {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+#right {
+    writing-mode: vertical-rl;
+}
+
+#bottom {
+    display: inline;
+    position: relative;
+    transform: rotate(180deg);
+    bottom: 25px;
+}
+
+#top {
+    display: inline;
+    position: relative;
+    top: 25px;
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrabble-App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scrabble.js"></script>
+</head>
+<body>
+    <h1><a class = "hidden" href="dictionary.txt">dictionary</a></h1>
+    <div id="modal" class="hidden">
+        <div id="modal-content">
+            <h2>Game Over</h2>
+            <p id="winner">Player 1 wins!</p>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+    <div id="outter-container">
+        <div id="leftside">
+            <h2>Scoreboard</h2>
+            <table id="scoreboard">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Player 1</td>
+                        <td id="player1-score">0</td>
+                    </tr>
+                    <tr>
+                        <td>Player 2</td>
+                        <td id="player2-score">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="container">
+            <div id="top">
+                <h1>Scrabble</h1>
+            </div>
+            <div id="middle">
+                <div id="left">
+                    <h1>Scrabble</h1>
+                </div>
+                <div id="main"></div>
+                <div id="right">
+                    <h1>Scrabble</h1>
+                </div>
+            </div>
+            <div id="bottom">
+                <h1>Scrabble</h1>
+            </div>
+        </div>
+        <div id="rightside">
+            <h2 class="center-text">Letter Scores</h2>
+            <table id="letter-scores">
+                <thead>
+                    <tr>
+                        <th>Letter</th>
+                        <th>-</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A</td>
+                        <td>-</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td>-</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>-</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td>-</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>E</td>
+                        <td>-</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>-</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>G</td>
+                        <td>-</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>H</td>
+                        <td>-</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>I</td>
+                        <td>-</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>J</td>
+                        <td>-</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>K</td>
+                        <td>-</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>-</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>-</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>N</td>
+                        <td>-</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>O</td>
+                        <td>-</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>P</td>
+                        <td>-</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Q</td>
+                        <td>-</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>R</td>
+                        <td>-</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>-</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>T</td>
+                        <td>-</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>U</td>
+                        <td>-</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>V</td>
+                        <td>-</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>W</td>
+                        <td>-</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>X</td>
+                        <td>-</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Y</td>
+                        <td>-</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Z</td>
+                        <td>-</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="player-letters">
+        <h2>Player Letters</h2>
+        <div id="player1-letters">Player 1: <span id="letters-player1"></span></div>
+        <div id="player2-letters">Player 2: <span id="letters-player2"></span></div>
+        <div id="player3-letters" class="hidden">Player 3: <span id="letters-player3"></span></div>
+        <div id="player4-letters" class="hidden">Player 4: <span id="letters-player4"></span></div>
+        <button id="swap-letters">Swap Letters</button>
+    </div>
+    <div id="game-controls">
+        <h2>Game Controls</h2>
+        <label for="num-players">Number of Players:</label>
+        <select id="num-players">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <label for="time-limit">Time Limit (seconds):</label>
+        <input type="number" id="time-limit" value="60">
+        <button id="start-game">Start Game</button>
+    </div>
+</body>
+</html>
